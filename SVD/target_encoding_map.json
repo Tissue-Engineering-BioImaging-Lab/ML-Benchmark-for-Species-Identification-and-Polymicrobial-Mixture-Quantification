@@ -1,0 +1,13 @@
+{
+    "0:10 | Staph : PAO": 0,
+    "10:0 | Staph : PAO": 1,
+    "1:9 | Staph : PAO": 2,
+    "3:7 | Staph : PAO": 3,
+    "5:5 | Staph : PAO": 4,
+    "7:3 | Staph : PAO": 5,
+    "9:1 | Staph : PAO": 6,
+    "Corn": 7,
+    "E.coli": 8,
+    "FAE": 9,
+    "Malt": 10
+}

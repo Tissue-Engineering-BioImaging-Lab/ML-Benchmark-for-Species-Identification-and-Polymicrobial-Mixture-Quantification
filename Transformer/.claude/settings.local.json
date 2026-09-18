@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd \"C:/Users/jaira/OneDrive/Documents/MEGA/University/Biomed Eng Research/Raman Analysis Project/Analysis\" && ls -la && echo \"---DATA---\" && ls -la data 2>/dev/null && echo \"---SINGLE---\" && ls data/single 2>/dev/null | head && echo \"---MIXED---\" && ls data/mixed_ratio 2>/dev/null | head)"
+    ]
+  }
+}

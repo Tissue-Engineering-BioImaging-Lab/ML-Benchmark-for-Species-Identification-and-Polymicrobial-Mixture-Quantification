@@ -1,0 +1,15 @@
+# GPU image for training the Raman CNN notebooks on an RTX 5070 (Blackwell / sm_120).
+# Based on NVIDIA's NGC TensorFlow container, which ships CUDA 12.8 + cuDNN with
+# Blackwell kernels. The stock `tensorflow/tensorflow:latest-gpu` image does NOT
+# work on this GPU (cuDNN fails to initialize and TF falls back to CPU).
+FROM nvcr.io/nvidia/tensorflow:25.02-tf2-py3
+
+# The NGC image already has numpy, pandas, scikit-learn, scipy and JupyterLab.
+# matplotlib + seaborn (plotting) and optuna (hyperparameter search) are missing.
+RUN pip install --no-cache-dir matplotlib seaborn optuna
+
+# The NGC image forces legacy Keras 2 (tf_keras) via TF_USE_LEGACY_KERAS=1, where
+# LeakyReLU uses the old `alpha=` argument. These notebooks are written for the
+# Keras 3 API (`negative_slope=`), and keras 3 is already installed in the image,
+# so switch tf.keras back to Keras 3.
+ENV TF_USE_LEGACY_KERAS=0

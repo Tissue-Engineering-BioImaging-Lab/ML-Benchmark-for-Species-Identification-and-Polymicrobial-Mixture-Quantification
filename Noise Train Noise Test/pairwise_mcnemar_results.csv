@@ -1,0 +1,7 @@
+model_1,model_2,model_1_only_correct,model_2_only_correct,statistic,p_raw,p_adj,significant
+RandomForest,XGBoost,35,924,822.2565172054224,7.819441880094688e-181,7.819441880094688e-181,True
+RandomForest,CNN,113,8038,7703.321801006012,0.0,0.0,True
+RandomForest,Transformer,795,7051,4986.6205709915885,0.0,0.0,True
+XGBoost,CNN,149,7185,6748.189937278429,0.0,0.0,True
+XGBoost,Transformer,1308,6675,3606.909182011775,0.0,0.0,True
+CNN,Transformer,1767,98,1491.8091152815014,0.0,0.0,True

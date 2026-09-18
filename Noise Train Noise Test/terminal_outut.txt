@@ -1,0 +1,40 @@
+Loaded 24702 samples, comparing models: ['RandomForest', 'XGBoost', 'CNN', 'Transformer']
+
+Per-model accuracy on this sample set:
+RandomForest    66.71000000000001%
+XGBoost         70.30999999999999%
+CNN                         98.79%
+Transformer                 92.04%
+dtype: str
+
+============================================================
+GLOBAL COCHRAN'S Q TEST
+============================================================
+Q statistic : 16154.6395
+df          : 3
+p-value     : 0.000000
+-> Significant: at least one model differs from the others.
+   Proceeding to pairwise McNemar post-hoc tests...
+
+============================================================
+PAIRWISE McNEMAR TESTS (holm-corrected)
+============================================================
+     model_1     model_2  model_1_only_correct  model_2_only_correct   statistic         p_raw         p_adj  significant
+RandomForest     XGBoost                    35                   924  822.256517 7.819442e-181 7.819442e-181         True
+RandomForest         CNN                   113                  8038 7703.321801  0.000000e+00  0.000000e+00         True
+RandomForest Transformer                   795                  7051 4986.620571  0.000000e+00  0.000000e+00         True
+     XGBoost         CNN                   149                  7185 6748.189937  0.000000e+00  0.000000e+00         True
+     XGBoost Transformer                  1308                  6675 3606.909182  0.000000e+00  0.000000e+00         True
+         CNN Transformer                  1767                    98 1491.809115  0.000000e+00  0.000000e+00         True
+
+============================================================
+PER-STRAIN COCHRAN'S Q
+============================================================
+           strain  n_samples           Q  df       p_value
+1:9 | Staph : PAO       7966 4364.273462   3  0.000000e+00
+3:7 | Staph : PAO       3855 5297.920744   3  0.000000e+00
+5:5 | Staph : PAO       4129 2547.289672   3  0.000000e+00
+7:3 | Staph : PAO       3909 5580.041557   3  0.000000e+00
+9:1 | Staph : PAO       4843  509.868526   3 3.467167e-110
+
+Saved: correctness_matrix.csv, pairwise_mcnemar_results.csv, per_strain_cochrans_q.csv

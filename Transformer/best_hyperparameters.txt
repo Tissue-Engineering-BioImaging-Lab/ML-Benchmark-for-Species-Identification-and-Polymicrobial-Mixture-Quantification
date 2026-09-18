@@ -1,0 +1,11 @@
+Best validation accuracy: 0.9514
+patch_size: 8
+d_model: 64
+num_heads: 2
+ff_dim: 256
+num_transformer_blocks: 1
+mlp_units: 128
+dropout: 0.25547091587579285
+l2_strength: 6.516990611177177e-05
+learning_rate: 0.004544383960336014
+batch_size: 256

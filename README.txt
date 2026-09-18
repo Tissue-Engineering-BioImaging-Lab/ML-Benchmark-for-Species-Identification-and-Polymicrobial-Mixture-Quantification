@@ -1,0 +1,3 @@
+- manually moved files into "data" folder from outputs of raman preprocessing notebook
+- feature map is produced for each subsection since some use mixed and single ratio csvs, some just use mixed
+- general analysis scripts are used to pull information for the data
